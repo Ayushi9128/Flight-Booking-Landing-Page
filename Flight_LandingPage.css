@@ -105,6 +105,9 @@ section{
     background-color: black;
     
 }
+.home-content{
+    margin-left:15px;
+}
 .home .home-content h1{
     font-size:6rem;
     font-weight:700;
