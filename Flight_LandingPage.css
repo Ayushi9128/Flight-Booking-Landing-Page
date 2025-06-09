@@ -22,14 +22,13 @@ body{
     color:white;
 }
 header{
-    margin-top:20px;
+   
     position:fixed;
     top:0;
     left:0;
     width:100%;
     padding:1rem 9%;
-    background-color: transparent;
-    filter:drop-shadow(10px);
+    background-color: rgba(0, 0, 0, 0.85);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -37,62 +36,71 @@ header{
 }
 
 .logo{
-    font-size:3rem;
+    font-size:2.5rem;
     color:orange;
-    font-weight:800;
+    font-weight:bold;
     cursor:pointer;
-    transition:0.5s ease;
-}
-
-.logo:hover{
-    transform:scale(1.1);
+    letter-spacing:0.5px;
+    transition:0.3s ease;
 }
 
 nav a{
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color:white;
-    margin-left:4rem;
+    margin-left:2rem;
     font-weight:500;
-    letter-spacing: 7px;
-    transition:0.3s ease;
+    letter-spacing: 3px;
+    transition:0.3s;
     border-bottom: 3px solid transparent;
-    border:3rem orange;
+    
 }
 
-nav a:hover,nav a.active{
+nav a:hover{
     color:orange;
     border-bottom:3px solid orange;
 }
-@media(max-width:995px){
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@media(max-width:768px){
+    .menu-toggle {
+    display: block;
+    }
+    
+    .menu-toggle:hover{
+        color:orange;
+    }
     nav{
+       
         position:absolute;
         display:none;
         top:0;
         right:0;
-        width:40%;
-        border-left: 3px solid orange;
-        border-bottom: 3px solid orange;
-        border-bottom-right-radius: 2rem;
+        width:60%;
+        flex-direction: column;
         padding:1rem solid;
         background-color: black;
         border-top:0.1rem solid rgba(0,0,0,0.1);
-
+        
     }
     nav.active{
-        display:block;
+        display:flex;
+        
     }
     nav a{
-        display:block;
-        font-size:2rem;
+        font-size:1.5rem;
         margin:3rem 0;
     }
-    nav a:hover,nav a:active{
-        padding:1rem;
-        border-radius:0.5rem;
-        border-bottom:0.5 solid orange;
+    
+} 
 
-    }
-}
 section{
     min-height:100vh;
     padding:5rem 9% 5rem;
