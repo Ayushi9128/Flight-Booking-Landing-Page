@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flight Booking</title>
+    
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
     rel="stylesheet"/>
@@ -13,6 +14,7 @@
 <body>
     <header>
         <a href="#"class="logo">Ruby travels</a>
+        <a href="Flight_Form.html"><button class="menu-toggle" onclick="toggleMenu()">╰┈➤</button></a>
         <nav >
             <a href="Flight_Form.html">Book Flight</a>
         </nav>
@@ -33,7 +35,12 @@
             <a href="Flight_Form.html" class="btn">Reserve seat</a>
         </div>
     </section>
-    
+    <script>
+        function toggleMenu() {
+        const nav = document.getElementById("navMenu");
+        nav.classList.toggle("active");
+        }
+    </script>
     
 </body>
 </html>
